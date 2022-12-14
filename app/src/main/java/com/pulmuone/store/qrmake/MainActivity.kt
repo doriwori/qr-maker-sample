@@ -14,9 +14,10 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
 
-        val qrCodeUrl = "https://pmoo365.sharepoint.com/sites/appstore"
+        val qrCodeUrl = "https://github.com/doriwori/qr-maker-sample"
         val dimension = 3000
 
+        // FIXME:- overlayBitmap parameter를 지우면 기본 QR 이미지가 생성된다.
         val bitmap = qrCodeUrl.convertQrCode(
             dimension = dimension,
             overlayBitmap = getBitmapFromAssetImage(
